@@ -813,14 +813,6 @@
       margin-top: 18px;
     }
 
-    .form-status {
-      min-height: 24px;
-      margin: 10px 0 0;
-      color: var(--slate-dark);
-      font-size: 0.94rem;
-      font-weight: 750;
-    }
-
     .site-footer {
       padding: 34px 0 42px;
       color: var(--muted);
@@ -1017,14 +1009,9 @@
     <div class="container nav">
       <a class="brand" href="#top" aria-label="Kamin Home Repair home">
         <span class="brand-mark" aria-hidden="true">
-         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-  <path fill="currentColor" d="
-    M3 12l9-7 9 7v8H3v-8z
-    M12 7l5 4H7l5-4z
-    M7 18h10v1.5H7V18z
-  "/>
-</svg>
-
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M4 11.5 12 5l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-8.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
         </span>
 
         <span class="brand-text">
@@ -1076,13 +1063,12 @@
         </div>
 
         <div class="hero-card" aria-label="Portrait of Kamin Home Repair owner outdoors">
-        <div class="project-photo-main">
-    <img 
-        src="https://static.wixstatic.com/media/42de7f_7da84d536e7145f1bd657bcd79e4b673~mv2.jpg/v1/crop/x_697,y_0,w_1606,h_2002/fill/w_628,h_784,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Family-214%20(2)_edited.jpg" 
-        alt="Portrait of Kamin Home Repair owner outdoors"
-    >
-</div>
-
+          <div class="project-photo-main">
+            <img
+              class="hero-image"
+              src="images/hero-owner.jpg"
+              alt="Kamin Home Repair owner smiling outdoors"
+            />
 
             <div class="hero-badge">
               <strong>Practical repairs with a design-minded eye</strong>
@@ -1177,9 +1163,10 @@
 
         <div class="why-card">
           <ul class="check-list">
-            <li><span class="check">✓</span><span> 5+ years of home repair and remodel experience</span></li>
+            <li><span class="check">✓</span><span>15+ years of home repair and remodel experience</span></li>
             <li><span class="check">✓</span><span>Thoughtful, detail-oriented approach to every project</span></li>
             <li><span class="check">✓</span><span>Clear communication and transparent pricing</span></li>
+            <li><span class="check">✓</span><span>Licensed, bonded, and insured</span></li>
             <li><span class="check">✓</span><span>Experience with older homes, rentals, and remodel punch lists</span></li>
           </ul>
         </div>
@@ -1343,7 +1330,7 @@
           </div>
         </div>
 
-        <form class="contact-card" id="quoteForm">
+        <form class="contact-card" id="quoteForm" action="https://formsubmit.co/kaminrobert@gmail.com" method="POST">
           <div class="form-grid">
             <div class="field">
               <label for="name">Name</label>
@@ -1382,7 +1369,9 @@
             <a class="button button-secondary" href="#services">Review services</a>
           </div>
 
-          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          <!-- FormSubmit redirect page after successful submission -->
+          <input type="hidden" name="_next" value="https://kaminrobert-commits.github.io/kamin-home-repair/#thank-you">
+          <input type="hidden" name="_captcha" value="false">
         </form>
       </div>
     </section>
@@ -1407,9 +1396,6 @@
   <script>
     const navToggle = document.querySelector(".nav-toggle");
     const navLinks = document.querySelector("#navLinks");
-    const quoteForm = document.querySelector("#quoteForm");
-    const formStatus = document.querySelector("#formStatus");
-    const photosInput = document.querySelector("#photos");
 
     navToggle.addEventListener("click", () => {
       const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
@@ -1421,44 +1407,6 @@
       if (!e.target.closest("header")) {
         navToggle.setAttribute("aria-expanded", "false");
         navLinks.classList.remove("is-open");
-      }
-    });
-
-    quoteForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
-
-      const formData = new FormData(quoteForm);
-      const data = {
-        name: formData.get("name"),
-        email: formData.get("email"),
-        address: formData.get("address"),
-        phone: formData.get("phone"),
-        description: formData.get("description"),
-      };
-
-      formStatus.textContent = "Sending...";
-      formStatus.style.color = "var(--muted)";
-
-      try {
-        const response = await fetch("/.netlify/functions/submit-quote", {
-          method: "POST",
-          body: JSON.stringify(data),
-        });
-
-        if (response.ok) {
-          formStatus.textContent = "✓ Quote request sent! I'll be in touch within 24 hours.";
-          formStatus.style.color = "var(--slate)";
-          quoteForm.reset();
-          setTimeout(() => {
-            formStatus.textContent = "";
-          }, 5000);
-        } else {
-          formStatus.textContent = "Error sending request. Please try again or email directly.";
-          formStatus.style.color = "#d32f2f";
-        }
-      } catch (error) {
-        formStatus.textContent = "Error sending request. Please try again or email directly.";
-        formStatus.style.color = "#d32f2f";
       }
     });
   </script>
