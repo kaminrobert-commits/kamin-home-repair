@@ -238,7 +238,6 @@
     }
 
     .button-secondary {
-      
       color: var(--charcoal);
       background: rgba(255, 253, 248, 0.78);
       border-color: var(--border);
@@ -391,20 +390,22 @@
       border-radius: 16px 16px 0 0;
       box-shadow: 0 -10px 30px rgba(35, 35, 35, 0.12);
     }
-.hero-image {
-  width: 100%;
-  height: 100%;
-  min-height: 574px;
-  object-fit: cover;
-  object-position: 45% center;
-  border-radius: 22px;
-}
 
-/* Turn off the old decorative placeholder shapes */
-.project-photo-main::before,
-.project-photo-main::after {
-  content: none;
-}
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      min-height: 574px;
+      object-fit: cover;
+      object-position: 45% center;
+      border-radius: 22px;
+    }
+
+    /* Turn off the old decorative placeholder shapes */
+    .project-photo-main::before,
+    .project-photo-main::after {
+      content: none;
+    }
+
     .hero-badge {
       position: absolute;
       left: 34px;
@@ -894,10 +895,11 @@
       .container {
         width: min(100% - 28px, var(--container));
       }
+
       .hero-image {
-  min-height: 366px;
-  object-position: 48% center;
-}
+        min-height: 366px;
+        object-position: 48% center;
+      }
 
       .nav {
         min-height: 68px;
@@ -1068,20 +1070,22 @@
           </p>
         </div>
 
-   <div class="hero-card" aria-label="Portrait of Kamin Home Repair owner outdoors">
-  <div class="project-photo-main">
-    <img
-      class="hero-image"
-      src="images/hero-owner.jpg"
-      alt="Kamin Home Repair owner smiling outdoors"
-    />
+        <div class="hero-card" aria-label="Portrait of Kamin Home Repair owner outdoors">
+          <div class="project-photo-main">
+            <img
+              class="hero-image"
+              src="images/hero-owner.jpg"
+              alt="Kamin Home Repair owner smiling outdoors"
+            />
 
-    <div class="hero-badge">
-      <strong>Practical repairs with a design-minded eye</strong>
-      <span>Bathrooms, tile, trim, fixtures, paint, drywall, punch lists, and more.</span>
-    </div>
-  </div>
-</div>
+            <div class="hero-badge">
+              <strong>Practical repairs with a design-minded eye</strong>
+              <span>Bathrooms, tile, trim, fixtures, paint, drywall, punch lists, and more.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section" id="services">
       <div class="container">
@@ -1154,19 +1158,23 @@
     <section class="section why" id="why">
       <div class="container why-grid">
         <div class="why-copy">
-          <p class="eyebrow">Why hire me</p>
-          <h2>Careful work. Clear communication. Practical solutions.</h2>
+          <p class="eyebrow">Why work with Kamin Home Repair</p>
+          <h2>Careful, practical home repairs</h2>
           <p>
-            I bring a mix of hands-on construction experience, design sense, and project management. That means I'm not just there to patch something quickly. I'm thinking about how the repair looks, how it holds up, and how it fits the home.
+            Whether you're looking for a simple fix or full bathroom update, I approach every project with attention to detail and respect for your home.
+          </p>
+
+          <p>
+            Most homeowners appreciate working with someone who listens, explains options clearly, and respects their space during the work.
           </p>
         </div>
 
         <div class="why-card">
           <ul class="check-list">
-            <li><span class="check">✓</span><span>Thoughtful, detail-focused workmanship</span></li>
-            <li><span class="check">✓</span><span>Clean, respectful work in your home</span></li>
-            <li><span class="check">✓</span><span>Clear estimates and honest scope conversations</span></li>
-            <li><span class="check">✓</span><span>Design-minded approach to repairs and updates</span></li>
+            <li><span class="check">✓</span><span>15+ years of home repair and remodel experience</span></li>
+            <li><span class="check">✓</span><span>Thoughtful, detail-oriented approach to every project</span></li>
+            <li><span class="check">✓</span><span>Clear communication and transparent pricing</span></li>
+            <li><span class="check">✓</span><span>Licensed, bonded, and insured</span></li>
             <li><span class="check">✓</span><span>Experience with older homes, rentals, and remodel punch lists</span></li>
           </ul>
         </div>
@@ -1192,18 +1200,13 @@
           </figure>
 
           <figure class="gallery-item">
-            <div class="photo-placeholder" data-label="Tile detail" style="--photo-bg: linear-gradient(135deg, #6d777b, #d9d1c4, #98704b);"></div>
-            <figcaption>Tile repair and grout refresh</figcaption>
+            <div class="photo-placeholder" data-label="Tile work" style="--photo-bg: linear-gradient(135deg, #a68b7f, #e0d5c7, #5a6366);"></div>
+            <figcaption>Tile install and grout finish</figcaption>
           </figure>
 
           <figure class="gallery-item">
-            <div class="photo-placeholder" data-label="Paint + trim" style="--photo-bg: linear-gradient(135deg, #ebe2d4, #a77546, #31363a);"></div>
-            <figcaption>Interior paint and trim detail</figcaption>
-          </figure>
-
-          <figure class="gallery-item">
-            <div class="photo-placeholder" data-label="Screen repair" style="--photo-bg: linear-gradient(135deg, #4f5d61, #bcc0bc, #8a653f);"></div>
-            <figcaption>Window screen repair</figcaption>
+            <div class="photo-placeholder" data-label="Interior paint" style="--photo-bg: linear-gradient(135deg, #c9b8a8, #f2e8dc, #697279);"></div>
+            <figcaption>Interior paint and trim refresh</figcaption>
           </figure>
 
           <figure class="gallery-item">
@@ -1234,89 +1237,51 @@
         <div class="process-grid">
           <article class="step-card">
             <div class="step-number">1</div>
-            <h3>Send me your project list</h3>
-            <p>Share photos, measurements, and what you'd like done.</p>
+            <h3>Send details</h3>
+            <p>Share photos, your address, and a description of what you need.</p>
           </article>
 
           <article class="step-card">
             <div class="step-number">2</div>
-            <h3>I'll help define the scope</h3>
-            <p>I'll let you know what I can handle, what materials may be needed, and what questions we should answer first.</p>
+            <h3>Quick response</h3>
+            <p>I'll review and get back to you within 24 hours with thoughts or questions.</p>
           </article>
 
           <article class="step-card">
             <div class="step-number">3</div>
-            <h3>We schedule the work</h3>
-            <p>For smaller jobs, I can often work from a simple hourly estimate. For larger projects, I'll break the work into phases.</p>
+            <h3>Scope and quote</h3>
+            <p>We'll talk through the work and I'll provide a clear estimate.</p>
           </article>
 
           <article class="step-card">
             <div class="step-number">4</div>
-            <h3>I leave the space clean and finished</h3>
-            <p>The goal is solid work, clear communication, and no mystery at the end.</p>
+            <h3>Get it done</h3>
+            <p>Professional work with clean-up, and a follow-up to make sure you're happy.</p>
           </article>
         </div>
       </div>
     </section>
 
-  <section class="section" id="pricing">
-  <div class="container pricing-wrapper">
-    <div class="pricing-card">
-      <p class="eyebrow">Pricing</p>
-      <h2>Simple, clear pricing</h2>
-      <p>
-        Most handyman work is billed at <strong>$75 per hour</strong>, plus materials.
-        Larger projects may be estimated by scope after reviewing photos or seeing the space.
-      </p>
-      <p>
-        I’ll always aim to be clear about the expected time, materials, and any scope questions before work begins.
-      </p>
-    </div>
+    <section class="section" id="pricing">
+      <div class="container pricing-wrapper">
+        <div class="pricing-card">
+          <p class="eyebrow">Pricing</p>
+          <h2>Simple, clear pricing</h2>
+          <p>
+            Most handyman work is billed at <strong>$75 per hour</strong>, plus materials.
+            Larger projects may be estimated by scope after reviewing photos or seeing the space.
+          </p>
+          <p>
+            I'll always aim to be clear about the expected time, materials, and any scope questions before work begins.
+          </p>
+        </div>
 
-    <div class="pricing-callout">
-      <strong>$75/hour<br />plus materials</strong>
-    </div>
-  </div>
-</section>
-<section class="section booking" id="booking">
-  <div class="container booking-grid">
-    <div class="booking-copy">
-      <p class="eyebrow">Scheduling</p>
-      <h2>Book approved project time</h2>
-      <p>
-        Once your quote is approved or your project scope has been confirmed, you can choose an available time slot online.
-      </p>
-      <p>
-        Please only use the booking calendar after we’ve discussed the project, confirmed it’s a good fit, and agreed on the next step.
-      </p>
-    </div>
+        <div class="pricing-callout">
+          <strong>$75/hour<br />plus materials</strong>
+        </div>
+      </div>
+    </section>
 
-    <div class="booking-card">
-      <h3>Ready to schedule?</h3>
-      <p>
-        Use the booking link below to choose a date and time that works for your approved project.
-      </p>
-
-      <a
-        class="button button-primary"
-        href="https://calendar.google.com/calendar/appointments/YOUR-BOOKING-LINK-HERE"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Book approved work
-      </a>
-
-      <p class="booking-note">
-        Not approved yet? Please request a quote first so I can review the project details.
-      </p>
-
-      <a class="button button-secondary" href="#contact">
-        Request a quote first
-      </a>
-    </div>
-  </div>
-</section>
-    
     <section class="section" id="testimonials">
       <div class="container">
         <div class="section-header">
@@ -1377,53 +1342,38 @@
           <div class="form-grid">
             <div class="field">
               <label for="name">Name</label>
-              <input id="name" name="name" type="text" autocomplete="name" required />
+              <input type="text" id="name" name="name" required />
             </div>
 
             <div class="field">
               <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required />
+              <input type="email" id="email" name="email" required />
             </div>
 
             <div class="field">
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" />
+              <label for="address">Address</label>
+              <input type="text" id="address" name="address" required />
             </div>
 
             <div class="field">
-              <label for="neighborhood">Neighborhood</label>
-              <input id="neighborhood" name="neighborhood" type="text" placeholder="Magnolia, Ballard, Queen Anne..." required />
+              <label for="phone">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone" />
             </div>
 
             <div class="field full">
-              <label for="projectType">Project type</label>
-              <select id="projectType" name="projectType" required>
-                <option value="">Choose one</option>
-                <option>Bathroom update or repair</option>
-                <option>Tile repair or installation</option>
-                <option>Interior painting or touch-up</option>
-                <option>Trim, doors, shelves, or finish carpentry</option>
-                <option>Drywall patching or repair</option>
-                <option>Fixture, vanity, fan, or hardware installation</option>
-                <option>Window screen or small exterior repair</option>
-                <option>General maintenance or punch list</option>
-              </select>
+              <label for="description">Describe your project</label>
+              <textarea id="description" name="description" required></textarea>
             </div>
 
             <div class="field full">
-              <label for="photos">Upload photos</label>
-              <input id="photos" name="photos" type="file" accept="image/*" multiple />
-              <p class="file-help" id="fileHelp">Choose a few clear photos if you have them.</p>
-            </div>
-
-            <div class="field full">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Tell me what you need help with, timing, measurements, and any details that may matter." required></textarea>
+              <label for="photos">Project photos (optional)</label>
+              <input type="file" id="photos" name="photos" multiple accept="image/*" />
+              <div class="file-help">JPG, PNG up to 5MB each</div>
             </div>
           </div>
 
           <div class="form-actions">
-            <button class="button button-primary" type="submit">Request a quote</button>
+            <button type="submit" class="button button-primary">Send quote request</button>
             <a class="button button-secondary" href="#services">Review services</a>
           </div>
 
@@ -1455,87 +1405,58 @@
     const quoteForm = document.querySelector("#quoteForm");
     const formStatus = document.querySelector("#formStatus");
     const photosInput = document.querySelector("#photos");
-    const fileHelp = document.querySelector("#fileHelp");
-
-    const CONTACT_EMAIL = "hello@kaminhomerepair.com";
-
-    function closeMobileNav() {
-      navToggle.setAttribute("aria-expanded", "false");
-      navToggle.setAttribute("aria-label", "Open menu");
-      navLinks.classList.remove("is-open");
-      document.body.classList.remove("nav-open");
-    }
 
     navToggle.addEventListener("click", () => {
-      const isOpen = navToggle.getAttribute("aria-expanded") === "true";
-
-      navToggle.setAttribute("aria-expanded", String(!isOpen));
-      navToggle.setAttribute("aria-label", isOpen ? "Open menu" : "Close menu");
-      navLinks.classList.toggle("is-open", !isOpen);
-      document.body.classList.toggle("nav-open", !isOpen);
+      const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+      navToggle.setAttribute("aria-expanded", !isExpanded);
+      navLinks.classList.toggle("is-open");
     });
 
-    navLinks.addEventListener("click", (event) => {
-      if (event.target.matches("a")) {
-        closeMobileNav();
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest("header")) {
+        navToggle.setAttribute("aria-expanded", "false");
+        navLinks.classList.remove("is-open");
       }
     });
 
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") {
-        closeMobileNav();
-      }
-    });
-
-    photosInput.addEventListener("change", () => {
-      const files = Array.from(photosInput.files);
-
-      if (files.length === 0) {
-        fileHelp.textContent = "Choose a few clear photos if you have them.";
-        return;
-      }
-
-      const fileNames = files.map((file) => file.name).join(", ");
-      fileHelp.textContent = `${files.length} photo${files.length === 1 ? "" : "s"} selected: ${fileNames}`;
-    });
-
-    quoteForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-
-      if (!quoteForm.checkValidity()) {
-        quoteForm.reportValidity();
-        return;
-      }
+    quoteForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
 
       const formData = new FormData(quoteForm);
-      const selectedPhotos = Array.from(photosInput.files).map((file) => file.name);
+      const data = {
+        name: formData.get("name"),
+        email: formData.get("email"),
+        address: formData.get("address"),
+        phone: formData.get("phone"),
+        description: formData.get("description"),
+      };
 
-      const subject = encodeURIComponent("Quote request for Kamin Home Repair");
+      formStatus.textContent = "Sending...";
+      formStatus.style.color = "var(--muted)";
 
-      const bodyLines = [
-        "New quote request:",
-        "",
-        `Name: ${formData.get("name")}`,
-        `Email: ${formData.get("email")}`,
-        `Phone: ${formData.get("phone") || "Not provided"}`,
-        `Neighborhood: ${formData.get("neighborhood")}`,
-        `Project type: ${formData.get("projectType")}`,
-        "",
-        "Message:",
-        formData.get("message"),
-        "",
-        selectedPhotos.length
-          ? `Selected photo filenames: ${selectedPhotos.join(", ")}`
-          : "No photos selected.",
-        "",
-        "Note: If using email, please attach the selected photos before sending."
-      ];
+      try {
+        const response = await fetch("/.netlify/functions/submit-quote", {
+          method: "POST",
+          body: JSON.stringify(data),
+        });
 
-      const mailtoHref = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
-
-      formStatus.textContent = "Opening your email app with the quote request. Please attach any selected photos before sending.";
-      window.location.href = mailtoHref;
+        if (response.ok) {
+          formStatus.textContent = "✓ Quote request sent! I'll be in touch within 24 hours.";
+          formStatus.style.color = "var(--slate)";
+          quoteForm.reset();
+          setTimeout(() => {
+            formStatus.textContent = "";
+          }, 5000);
+        } else {
+          formStatus.textContent = "Error sending request. Please try again or email directly.";
+          formStatus.style.color = "#d32f2f";
+        }
+      } catch (error) {
+        formStatus.textContent = "Error sending request. Please try again or email directly.";
+        formStatus.style.color = "#d32f2f";
+      }
     });
   </script>
 </body>
+
 </html>
