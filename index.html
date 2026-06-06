@@ -1330,7 +1330,7 @@
           </div>
         </div>
 
-        <form class="contact-card" id="quoteForm" action="https://formsubmit.co/kaminrobert@gmail.com" method="POST">
+        <form class="contact-card" id="quoteForm" action="https://formspree.io/f/xvgzqenk" method="POST" enctype="multipart/form-data">
           <div class="form-grid">
             <div class="field">
               <label for="name">Name</label>
@@ -1360,7 +1360,7 @@
             <div class="field full">
               <label for="photos">Project photos (optional)</label>
               <input type="file" id="photos" name="photos" multiple accept="image/*" />
-              <div class="file-help">JPG, PNG up to 5MB each</div>
+              <div class="file-help">JPG, PNG up to 25MB total</div>
             </div>
           </div>
 
@@ -1368,10 +1368,6 @@
             <button type="submit" class="button button-primary">Send quote request</button>
             <a class="button button-secondary" href="#services">Review services</a>
           </div>
-
-          <!-- FormSubmit redirect page after successful submission -->
-          <input type="hidden" name="_next" value="https://kaminrobert-commits.github.io/kamin-home-repair/#thank-you">
-          <input type="hidden" name="_captcha" value="false">
         </form>
       </div>
     </section>
