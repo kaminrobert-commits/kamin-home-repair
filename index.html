@@ -140,7 +140,9 @@
       border-radius: 14px;
       box-shadow: 0 10px 24px rgba(56, 66, 73, 0.18);
     }
-
+.hidden-section {
+  display: none;
+}
     .brand-text {
       display: flex;
       flex-direction: column;
@@ -1028,7 +1030,7 @@
 
       <nav class="nav-links" id="navLinks" aria-label="Main navigation">
         <a href="#services">Services</a>
-        <a href="#work">Recent work</a>
+        <!-- <a href="#work">Recent work</a> -->
         <a href="#process">Process</a>
         <a href="#pricing">Pricing</a>
         <a class="button button-primary" href="#contact">Request a quote</a>
@@ -1050,7 +1052,7 @@
 
           <div class="hero-actions">
             <a class="button button-primary" href="#contact">Request a quote</a>
-            <a class="button button-secondary" href="#work">See recent work</a>
+           <a class="button button-secondary" href="#services">See services</a>
           </div>
 
           <p class="trust-line">
@@ -1171,7 +1173,7 @@
       </div>
     </section>
 
-    <section class="section" id="work">
+    <section class="section hidden-section" id="work">
       <div class="container">
         <div class="section-header">
           <div>
